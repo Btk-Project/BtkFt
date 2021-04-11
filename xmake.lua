@@ -1,0 +1,7 @@
+add_requires("freetype2")
+add_packages("freetype2")
+add_links("freetype")
+target("btkft")
+    set_kind("shared")
+    set_languages("c++17")
+    add_files("./src/*.cpp")
