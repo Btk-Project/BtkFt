@@ -1,16 +1,14 @@
 #include "internal.hpp"
 
 namespace BtkFt{
-    System *System::instance = nullptr;
-    void *FtLibrary(){
-        return __TTF_FtLibrary();
-    }
+    Library *library = nullptr;
     void Init(){
-        TTF_Init();
-        System::instance = new System();
+        if(library != nullptr){
+            library = new Library;
+        }
     }
     void Quit(){
-        delete System::instance;
-        TTF_Quit();
+        delete library;
+        library = nullptr;
     }
 }

@@ -1,0 +1,36 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/**/include",
+                "/usr/include/freetype2"
+            ],
+            "defines": [
+                "BTK_USE_GFX",
+                "BTK_USE_FONTCONFIG"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        },
+        {
+            //MSVC
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/**/include",
+                "${default}"
+            ],
+            "defines": [
+                "BTK_USE_GFX"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "${default}"
+        }
+    ],
+    "version": 4
+}
